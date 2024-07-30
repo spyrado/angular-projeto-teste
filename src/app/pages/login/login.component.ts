@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,7 +9,15 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-  constructor(private route: Router) {}
+  public form: FormGroup = this.fb.group({
+    username: [undefined],
+    password: [undefined]
+  });
+
+  constructor(
+    private route: Router,
+    private fb: FormBuilder
+  ) {}
 
 
   onSubmit(e: SubmitEvent) {
@@ -18,6 +27,6 @@ export class LoginComponent {
   }
 
   private redirectToHome() {
-    this.route.navigate(['/home']);
+    this.route.navigate(['']);
   }
 }

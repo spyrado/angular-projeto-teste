@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CadastroRoutingModule } from './cadastro-routing.module';
 import { CadastroComponent } from './cadastro.component';
-
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,8 @@ import { CadastroComponent } from './cadastro.component';
   ],
   imports: [
     CommonModule,
-    CadastroRoutingModule
+    CadastroRoutingModule,
+    MatTabsModule
   ]
 })
 export class CadastroModule { }
