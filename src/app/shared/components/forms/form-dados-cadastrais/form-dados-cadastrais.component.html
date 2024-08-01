@@ -1,0 +1,30 @@
+<form [formGroup]="form">
+  <div class="form-dados-cadastrais">
+    <h2>Dados do usuário</h2>
+    <mat-form-field class="mx-3">
+      <mat-label>nome</mat-label>
+      <input matInput formControlName="nome">
+    </mat-form-field>
+    <mat-form-field class="mx-3">
+      <mat-label>idade</mat-label>
+      <input matInput formControlName="idade">
+    </mat-form-field>
+    <mat-form-field class="mx-3" appearance="fill">
+      <mat-label>data de aniversário</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <div>
+      <h4 class="mb-2">sexo</h4>
+      <mat-radio-group
+        formControlName="genero"
+        aria-labelledby="example-radio-group-label"
+        aria-label="Select an option"
+      >
+        <mat-radio-button value="1">masculino</mat-radio-button>
+        <mat-radio-button value="2">feminino</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+</form>
