@@ -1,0 +1,29 @@
+<form [formGroup]="form">
+  <div class="form-endereco">
+    <h2>endereço</h2>
+    <mat-form-field class="mx-3">
+      <mat-label>endereco</mat-label>
+      <input matInput formControlName="endereco">
+    </mat-form-field>
+    <mat-form-field class="mx-3">
+      <mat-label>numero</mat-label>
+      <input matInput formControlName="numero">
+    </mat-form-field>
+    <mat-form-field class="mx-3" appearance="fill">
+      <mat-label>cidade</mat-label>
+      <mat-select formControlName="cidade">
+        <mat-option value="option1">São Paulo</mat-option>
+        <mat-option value="option3">Curitiba</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="mx-3" appearance="fill">
+      <mat-label>estado</mat-label>
+      <mat-select formControlName="estado">
+        <mat-option value="option1">SP</mat-option>
+        <mat-option value="option3">PR</mat-option>
+        <mat-option value="option3">PB</mat-option>
+        <mat-option value="option3">PE</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</form>

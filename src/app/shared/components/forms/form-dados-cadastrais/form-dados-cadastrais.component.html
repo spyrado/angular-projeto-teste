@@ -1,6 +1,6 @@
 <form [formGroup]="form">
   <div class="form-dados-cadastrais">
-    <h2>Dados do usuário</h2>
+    <h2>dados do usuário</h2>
     <mat-form-field class="mx-3">
       <mat-label>nome</mat-label>
       <input matInput formControlName="nome">
@@ -11,7 +11,7 @@
     </mat-form-field>
     <mat-form-field class="mx-3" appearance="fill">
       <mat-label>data de aniversário</mat-label>
-      <input matInput [matDatepicker]="picker">
+      <input matInput formControlName="data_aniversario" [matDatepicker]="picker">
       <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
